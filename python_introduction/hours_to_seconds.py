@@ -7,4 +7,4 @@ hours = 2
 seconds = hours * 3600
 
 # Step 3: print result
-print("{hours} hour(s) is {seconds} seconds")
+print(f"{hours} hour(s) is {seconds} seconds")
