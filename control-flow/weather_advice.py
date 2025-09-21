@@ -13,7 +13,7 @@ def main():
         print("Don't forget your umbrella and a raincoat.")
     elif weather == "cold":
         print("Make sure to wear a warm coat and a scarf.")
-    else:
+    
         # Handles any unexpected input (e.g., "windy", "cloudy", typos)
         print("Sorry, I don't have recommendations for this weather.")
 
