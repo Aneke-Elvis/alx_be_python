@@ -32,4 +32,4 @@ else:
     final_message = f"'{task}' {base_message}."
 
 # Print the customized reminder
-print("\nReminder:", final_message)
+print("\Reminder:", final_message)
