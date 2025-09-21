@@ -1,35 +1,34 @@
 # daily_reminder.py
 
-# Prompt for user input
+# 1. Prompt for a Single Task
 task = input("Enter your task: ")
 priority = input("Priority (high/medium/low): ").lower()
 time_bound = input("Is it time-bound? (yes/no): ").lower()
 
-# --- Core Logic to Generate Reminder ---
-# This is where the fix is applied.
-
-# First, determine the base message based on priority using match...case
+# 2. Process the Task Based on Priority and Time Sensitivity
+# Use a match...case statement for priority and build the core message.
 match priority:
     case "high":
-        base_message = f"is a **high priority** task"
+        priority_message = f"is a **high priority** task"
     case "medium":
-        base_message = f"is a **medium priority** task"
+        priority_message = f"is a **medium priority** task"
     case "low":
-        base_message = f"is a **low priority** task."
+        priority_message = f"is a **low priority** task."
     case _:
-        # Handles cases where priority is not one of the expected values
-        base_message = "is a task with an unknown priority"
+        # Default case for invalid priority
+        priority_message = f"is a task with an unknown priority"
 
-# Next, use an if statement to add time-bound information
+# Use an if statement to modify the message if the task is time-bound.
 if time_bound == "yes":
-    # If it's time-bound, add the "immediate attention" phrase.
-    final_message = f"'{task}' {base_message} that requires immediate attention today!"
+    # This combines the task, the priority message, and the time-bound message.
+    final_reminder = f"'{task}' {priority_message} that requires immediate attention today!"
 elif priority == "low" and time_bound == "no":
-    # Special message for low-priority, non-time-bound tasks.
-    final_message = f"Note: '{task}' {base_message} Consider completing it when you have free time."
+    # This handles the specific "low priority, non-time-bound" case.
+    final_reminder = f"Note: '{task}' {priority_message} Consider completing it when you have free time."
 else:
-    # Default case for other non-time-bound tasks.
-    final_message = f"'{task}' {base_message}."
+    # This handles all other non-time-bound cases (medium, high, or unknown priority).
+    final_reminder = f"'{task}' {priority_message}."
 
-# Print the customized reminder
-print("\Reminder:", final_message)
+# 3. Provide a Customized Reminder
+# The fix is here: Ensure the print statement has the exact "Reminder: " prefix.
+print(f"Reminder: {final_reminder}")
