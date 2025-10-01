@@ -1,5 +1,5 @@
 #create a function
-def perform_operation( numb1: float, numb2: float, operation: str):
+def perform_operation( numb1, numb2, operation):
     if operation == "add":
         return numb1 + numb2
     elif operation == "subtract":
