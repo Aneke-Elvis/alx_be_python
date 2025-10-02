@@ -1,18 +1,3 @@
-#create a shoplist
-#!/usr/bin/env python3
-"""
-shopping_list_manager.py
-A simple shopping list manager using a Python list and a text-menu interface.
-
-Features:
-- Start with an empty shopping_list list
-- Menu to add, remove, view items, or exit
-- Graceful handling of invalid menu choices
-- Case-insensitive removal (removes first matching item)
-- Handles KeyboardInterrupt/EOF gracefully
-"""
-
-
 def display_menu():
     print("\nShopping List Manager")
     print("---------------------")
@@ -82,3 +67,17 @@ if __name__ == "__main__":
         main()
     except (KeyboardInterrupt, EOFError):
         print("\nExiting. Goodbye!")
+
+#create a shoplist
+#!/usr/bin/env python3
+"""
+shopping_list_manager.py
+A simple shopping list manager using a Python list and a text-menu interface.
+
+Features:
+- Start with an empty shopping_list list
+- Menu to add, remove, view items, or exit
+- Graceful handling of invalid menu choices
+- Case-insensitive removal (removes first matching item)
+- Handles KeyboardInterrupt/EOF gracefully
+"""
