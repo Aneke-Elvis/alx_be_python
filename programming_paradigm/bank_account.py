@@ -46,12 +46,6 @@ class BankAccount:
 
     @staticmethod
     def _format_currency(amount):
-        """
-        Format amount like $50 or $12.5 (no unnecessary trailing zeros).
-        Internal helper — kept simple for this exercise.
-        """
-        s = f"{amount:.2f}"
-        # remove trailing zeros and trailing dot if integer
-        if '.' in s:
-            s = s.rstrip('0').rstrip('.')
-        return f"${s}"
+       """Format amount with two decimal places, e.g., $250.00"""
+       return f"${amount:.2f}"
+
